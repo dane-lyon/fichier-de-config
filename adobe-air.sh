@@ -151,14 +151,15 @@ elif [ $CHKVer = "14.04.3" ] || [ $CHKVer = "17.3" ]; then
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
 	fi
 
-elif [ $CHKVer = "16.04" ] || [ $CHKVer = "18" ]; then
-	#For Ubuntu 16.04 64bit and Linux Mint 18
+elif [ $CHKVer = "16.04" ] || [ $CHKVer = "18" ] || [ $CHKVer = "18.04" ] ; then
+	#For Ubuntu 16.04 64bit and Linux Mint 18 / Ubuntu 18.04
 	if [ $CHKArch = "x86_64" ]; then
-
 		if [ $TVer = "16.04" ]; then
 		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 		elif [ $TVer = "18" ]; then
 		echo "You are running Linux Mint `printf "\e[32m18"``echo -e "\033[0m"`"
+		elif [ $TVer = "18.04" ]; then
+		echo "You are running Ubuntu `printf "\e[32m18"``echo -e "\033[0m"`"
 		fi
 		#echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 
