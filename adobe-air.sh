@@ -2,7 +2,7 @@
 #Script written by Umair <umair@noobslab.com> Mon, 08 Sep 2014 02:24:08 +0200
 #Updated on Tue, 18 Oct 2016 10:31:08 +0200
 #Site: http://www.NoobsLab.com
-# Le script est replacé ici pour être automatisé (-y) ce qui n'était pas le cas sur l'originale !
+# Ajout simbd : support de Mint 18.3 (toujours basé sur 16.04), Attention : la 18.04 n'est pas compatible !
 
 if [ $EUID -ne 0 ]; then
    echo "AdobeAir installation script must be run as root. (Hint: use sudo)" 1>&2
@@ -28,7 +28,7 @@ if [ $CHKVer = "14.04" ] || [ $CHKVer = "17" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -43,7 +43,7 @@ if [ $CHKVer = "14.04" ] || [ $CHKVer = "17" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -61,7 +61,7 @@ elif [ $CHKVer = "14.04.1" ] || [ $CHKVer = "17.1" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -76,7 +76,7 @@ elif [ $CHKVer = "14.04.1" ] || [ $CHKVer = "17.1" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -94,7 +94,7 @@ elif [ $CHKVer = "14.04.2" ] || [ $CHKVer = "17.2" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -109,7 +109,7 @@ elif [ $CHKVer = "14.04.2" ] || [ $CHKVer = "17.2" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -128,7 +128,7 @@ elif [ $CHKVer = "14.04.3" ] || [ $CHKVer = "17.3" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -143,7 +143,7 @@ elif [ $CHKVer = "14.04.3" ] || [ $CHKVer = "17.3" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -151,21 +151,20 @@ elif [ $CHKVer = "14.04.3" ] || [ $CHKVer = "17.3" ]; then
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
 	fi
 
-elif [ $CHKVer = "16.04" ] || [ $CHKVer = "18" ] || [ $CHKVer = "18.04" ] ; then
-	#For Ubuntu 16.04 64bit and Linux Mint 18 / Ubuntu 18.04
+elif [ $CHKVer = "16.04" ] || [ $CHKVer = "18" ]; then
+	#For Ubuntu 16.04 64bit and Linux Mint 18
 	if [ $CHKArch = "x86_64" ]; then
+
 		if [ $TVer = "16.04" ]; then
 		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 		elif [ $TVer = "18" ]; then
 		echo "You are running Linux Mint `printf "\e[32m18"``echo -e "\033[0m"`"
-		elif [ $TVer = "18.04" ]; then
-		echo "You are running Ubuntu `printf "\e[32m18"``echo -e "\033[0m"`"
 		fi
 		#echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 libnss-mdns:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 libnss-mdns:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -176,7 +175,7 @@ elif [ $CHKVer = "16.04" ] || [ $CHKVer = "18" ] || [ $CHKVer = "18.04" ] ; then
 		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -198,7 +197,7 @@ elif [ $CHKVer = "16.04.1" ] || [ $CHKVer = "18.1" ]; then
 
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 libnss-mdns:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 libnss-mdns:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -209,7 +208,7 @@ elif [ $CHKVer = "16.04.1" ] || [ $CHKVer = "18.1" ]; then
 		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -217,14 +216,43 @@ elif [ $CHKVer = "16.04.1" ] || [ $CHKVer = "18.1" ]; then
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
 	fi
 
-
+elif [ $CHKVer = "16.04.4" ] || [ $CHKVer = "18.3" ]; then
+	#For Ubuntu 16.04.4 64bit and Linux Mint 18.3
+	if [ $CHKArch = "x86_64" ]; then
+		if [ $TVer = "16.04.4" ]; then
+		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
+		elif [ $TVer = "18.3" ]; then
+		echo "You are running Linux Mint `printf "\e[32m18"``echo -e "\033[0m"`"
+		fi
+		#echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
+		echo "Installing dependencies..."
+		sleep 1
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 libnss-mdns:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		echo "Linking files..."
+		echo "."
+		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
+		echo ".."
+		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+	#Ubuntu 16.04.4 32bit and Linux Mint 18.3
+	elif [ $CHKArch = "i686" ]; then
+		echo "You are running Ubuntu `printf "\e[32m16.04 Xenial"``echo -e "\033[0m"`"
+		echo "Installing dependencies..."
+		sleep 1
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		echo "Linking files..."
+		echo "."
+		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
+		echo ".."
+		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+	fi
+	
 elif [ $CHKVer = "15.10" ]; then
 	#For Ubuntu 15.10 64bit
 	if [ $CHKArch = "x86_64" ]; then
 		echo "You are running Ubuntu `printf "\e[32m15.10 Wily"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -235,7 +263,7 @@ elif [ $CHKVer = "15.10" ]; then
 		echo "You are running Ubuntu `printf "\e[32m15.10 Wily"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -249,7 +277,7 @@ elif [ $CHKVer = "15.04" ]; then
 		echo "You are running Ubuntu `printf "\e[32m15.04 Vivid"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
+		apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -260,7 +288,7 @@ elif [ $CHKVer = "15.04" ]; then
 		echo "You are running Ubuntu `printf "\e[32m15.04 Vivid"``echo -e "\033[0m"`"
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
+		apt-get install libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -278,7 +306,7 @@ elif [ $CHKVer = "12.04" ] || [ $CHKVer = "13" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install libhal-storage1 libgnome-keyring0 libgnome-keyring0 libgtk2.0-0 libxslt1.1 libxml2
+		apt-get install libhal-storage1 libgnome-keyring0 libgnome-keyring0 libgtk2.0-0 libxslt1.1 libxml2
 		echo "Linking files..."
 		echo "."
 		ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
@@ -293,7 +321,7 @@ elif [ $CHKVer = "12.04" ] || [ $CHKVer = "13" ]; then
 		fi
 		echo "Installing dependencies..."
 		sleep 1
-		apt-get -y install ia32-libs lib32nss-mdns libhal-storage1 libgnome-keyring0 libgnome-keyring0 libgtk2.0-0 libxslt1.1 libxml2
+		apt-get install ia32-libs lib32nss-mdns libhal-storage1 libgnome-keyring0 libgnome-keyring0 libgtk2.0-0 libxslt1.1 libxml2
 		echo "Symbolic linking files..."
 		echo "."
 		ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
